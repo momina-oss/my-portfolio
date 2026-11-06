@@ -37,7 +37,7 @@ export const skills = [
   {
     group: 'Design & Creative',
     icon: '◐',
-    items: ['Power BI', 'UI/UX Design', 'Adobe Illustrator', 'Adobe Photoshop', 'Adobe Lightroom', 'Canva', 'Visual Storytelling'],
+    items: ['Power BI', 'UI/UX Design', 'Figma', 'Adobe Illustrator', 'Adobe Photoshop', 'Adobe Lightroom', 'Canva', 'Visual Storytelling'],
   },
   {
     group: 'Leadership & Professional',
