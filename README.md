@@ -1,21 +1,44 @@
-# Momina Zahid | Portfolio
+# Momina Zahid | Personal Portfolio
 
-React + Vite portfolio (dark black/blue theme).
+A personal portfolio website built with **React.js and Vite**, featuring a modern dark black-and-blue theme. It showcases my technical skills, projects, experience, and UI design work.
 
-## Run
+## Live Website
 
-```
-npm install
-npm run dev
-```
+🌐 **Portfolio:** https://momina-zahid-portfolio.vercel.app/
 
-Open the URL printed in the terminal (usually http://localhost:5173).
+## Tech Stack
 
-## Edit your content
+- React.js
+- JavaScript
+- Vite
+- HTML5
+- CSS3
 
-Everything (links, projects, experience, skills, challenges) lives in `src/data.js`.
-Replace the GitHub placeholder there with your real profile link.
+## Features
+
+- Personal introduction and professional profile
+- Technical skills and technologies
+- Projects showcase
+- Experience and achievements
+- UI Challenges gallery with full-screen previews
+- Responsive portfolio interface
+
+## Project Structure
+
+- `src/data.js` – Portfolio content, including links, projects, experience, skills, and challenges.
+- `src/challenges/` – UI challenge implementations.
+- `src/challengeRegistry.js` – Registers and loads UI challenges.
 
 ## UI Challenges
 
-The real designs live in `src/challenges/` (copied from the ui_challenges project). `src/challengeRegistry.js` loads them, and the UI Challenges page opens each one in a full-screen viewer with Prev/Next.
+The portfolio includes a dedicated UI Challenges section featuring interactive design implementations. Each challenge opens in a full-screen viewer with Previous and Next navigation.
+
+## Author
+
+**Momina Zahid**
+
+- Portfolio: https://momina-zahid-portfolio.vercel.app/
+
+---
+
+Built with React.js and Vite.
