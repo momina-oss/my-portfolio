@@ -1,0 +1,328 @@
+.page {
+    min-height: 100vh;
+    background: radial-gradient(circle at 20% 10%, #1a1a2e, #0b0b16 55%);
+    padding: 60px 24px 80px;
+    color: #f1f1f5;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .wrap {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* ---- Ticket ---- */
+  .ticket {
+    background: #14141f;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+    margin-bottom: 16px;
+  }
+  
+  .mainStub {
+    padding: 26px 24px 22px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .airline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 800;
+  }
+  
+  .airlineLogo {
+    color: #7c6cff;
+    font-size: 16px;
+  }
+  
+  .classTag {
+    font-size: 10.5px;
+    font-weight: 700;
+    padding: 5px 11px;
+    border-radius: 999px;
+    background: rgba(124, 108, 255, 0.15);
+    color: #b7aeff;
+  }
+  
+  /* ---- Route ---- */
+  .routeRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  
+  .routePoint {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  
+  .airportCode {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  
+  .cityName {
+    font-size: 11px;
+    color: #8a8a9a;
+  }
+  
+  .routeLine {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 10px;
+  }
+  
+  .dashLine {
+    flex: 1;
+    height: 1px;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.25) 0,
+      rgba(255, 255, 255, 0.25) 4px,
+      transparent 4px,
+      transparent 8px
+    );
+  }
+  
+  .planeIcon {
+    color: #7c6cff;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+  
+  /* ---- Passenger ---- */
+  .passengerRow {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .passengerLabel {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #7a7a8c;
+  }
+  
+  .passengerName {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  
+  /* ---- Details grid ---- */
+  .detailsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px 8px;
+  }
+  
+  .detailItem {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .detailLabel {
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #7a7a8c;
+  }
+  
+  .detailValue {
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+  }
+  
+  .detailValueHighlight {
+    font-size: 13px;
+    font-weight: 800;
+    font-family: 'Courier New', monospace;
+    color: #7c6cff;
+  }
+  
+  /* ---- Perforation ---- */
+  .perforation {
+    position: relative;
+    height: 0;
+    border-top: 2px dashed rgba(255, 255, 255, 0.15);
+  }
+  .perforation::before,
+  .perforation::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #0b0b16;
+  }
+  .perforation::before { left: -10px; }
+  .perforation::after { right: -10px; }
+  
+  /* ---- Stub ---- */
+  .stub {
+    padding: 20px 24px 24px;
+    background: rgba(255, 255, 255, 0.02);
+  }
+  
+  .stubTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+  
+  .stubRoute {
+    display: block;
+    font-size: 14px;
+    font-weight: 800;
+  }
+  
+  .stubFlight {
+    display: block;
+    font-size: 10.5px;
+    color: #8a8a9a;
+    margin-top: 2px;
+  }
+  
+  .stubSeat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+  }
+  
+  .stubSeat span {
+    font-size: 9px;
+    color: #7a7a8c;
+    letter-spacing: 0.04em;
+  }
+  
+  .stubSeat strong {
+    font-size: 18px;
+    color: #7c6cff;
+  }
+  
+  .barcode {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    height: 44px;
+    margin-bottom: 8px;
+  }
+  
+  .barLine {
+    height: 100%;
+    background: #f1f1f5;
+    flex-shrink: 0;
+  }
+  
+  .confirmationCode {
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.15em;
+    color: #7a7a8c;
+  }
+  
+  /* ---- Wallet button ---- */
+  .walletBtn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    border: none;
+    background: #000;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13.5px;
+    cursor: pointer;
+    margin-bottom: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: transform 0.15s;
+  }
+  .walletBtn:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* ---- Promo cards ---- */
+  .promoRow {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .promoCard {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .promoIcon {
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  
+  .promoText {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+  
+  .promoTitle {
+    font-size: 12.5px;
+    font-weight: 700;
+  }
+  
+  .promoSub {
+    font-size: 11px;
+    color: #8a8a9a;
+  }
+  
+  .promoBtn {
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(124, 108, 255, 0.4);
+    background: rgba(124, 108, 255, 0.1);
+    color: #b7aeff;
+    font-size: 11.5px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  
+  /* ---- Responsive ---- */
+  @media (max-width: 420px) {
+    .detailsGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }

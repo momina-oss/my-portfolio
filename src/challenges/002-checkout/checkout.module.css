@@ -1,0 +1,287 @@
+.checkout-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 24px 24px;
+    background: radial-gradient(circle at 20% 20%, #1a1a2e, #0b0b16 60%);
+  }
+  
+  .checkout-card {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  }
+  
+  .checkout-card h1 {
+    margin: 0 0 4px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .muted {
+    color: #9a9aab;
+    font-size: 13px;
+    margin: 0 0 20px;
+  }
+  
+  /* --- Card preview --- */
+  .card-scene {
+    perspective: 1000px;
+    margin-bottom: 28px;
+  }
+  
+  .card-preview {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    border-radius: 18px;
+    transform-style: preserve-3d;
+    transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  }
+  
+  .card-preview.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .card-face {
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    backface-visibility: hidden;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .brand-visa .card-face { background: linear-gradient(135deg, #4b5df0, #2f3ba3); }
+  .brand-mastercard .card-face { background: linear-gradient(135deg, #ff5f5f, #ff9a44); }
+  .brand-amex .card-face { background: linear-gradient(135deg, #37bfa7, #1d7d6d); }
+  .brand-discover .card-face { background: linear-gradient(135deg, #f7941d, #c96a00); }
+  .brand-generic .card-face { background: linear-gradient(135deg, #3a3a52, #1e1e2e); }
+  
+  .card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .chip {
+    width: 40px;
+    height: 30px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #ffe08a, #e0b64c);
+  }
+  
+  .brand-label {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    opacity: 0.9;
+  }
+  
+  .card-number {
+    font-size: 21px;
+    letter-spacing: 0.08em;
+    font-family: 'Courier New', monospace;
+  }
+  
+  .card-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .tiny-label {
+    font-size: 9px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    letter-spacing: 0.06em;
+  }
+  
+  .card-name {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg, #2b2b3d, #17171f);
+    padding: 0;
+  }
+  
+  .magnetic-strip {
+    height: 42px;
+    background: #111;
+    margin-top: 22px;
+  }
+  
+  .signature-strip {
+    margin: 24px 20px 0;
+    background: #e8e4de;
+    height: 34px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 14px;
+    color: #333;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.1em;
+  }
+  
+  /* --- Form --- */
+  .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    flex: 1;
+  }
+  
+  .field label {
+    font-size: 12px;
+    color: #b7b7c5;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  
+  .field input {
+    padding: 13px 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    font-family: 'Courier New', monospace;
+  }
+  
+  .field input:focus {
+    border-color: #4b5df0;
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  .row {
+    display: flex;
+    gap: 14px;
+  }
+  
+  .err {
+    color: #ff9c9c;
+    font-size: 11px;
+    margin-top: 4px;
+  }
+  
+  .summary {
+    margin: 18px 0;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #b7b7c5;
+    margin-bottom: 6px;
+  }
+  
+  .summary-row.total {
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 0;
+  }
+  
+  .pay-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #4b5df0, #2f3ba3);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    box-shadow: 0 10px 30px rgba(75, 93, 240, 0.35);
+    transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+  }
+  
+  .pay-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 36px rgba(75, 93, 240, 0.45);
+  }
+  
+  .pay-btn:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .secure-note {
+    text-align: center;
+    font-size: 11px;
+    color: #7a7a8c;
+    margin-top: 14px;
+  }
+  
+  .success-panel {
+    text-align: center;
+    padding: 20px 8px;
+  }
+  
+  .check {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4dff88, #37e2ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #08130c;
+    animation: pop 0.4s ease;
+  }
+  @keyframes pop {
+    0% { transform: scale(0); }
+    70% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+  }
+
+  .cvv {
+    max-width: 100px;
+  }

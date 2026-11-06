@@ -1,0 +1,371 @@
+.page {
+    min-height: 100vh;
+    background: radial-gradient(circle at 20% 10%, #1a140f, #0b0906 55%);
+    padding: 60px 24px 80px;
+    color: #f1ece5;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .receipt {
+    width: 100%;
+    max-width: 420px;
+    background: #17120d;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* ---- Top promo ---- */
+  .topPromo {
+    background: linear-gradient(135deg, #c4744a, #8a5a3b);
+    color: #fff;
+    font-size: 12.5px;
+    font-weight: 600;
+    text-align: center;
+    padding: 11px 16px;
+  }
+  
+  /* ---- Header ---- */
+  .header {
+    padding: 24px 24px 16px;
+    text-align: center;
+  }
+  
+  .logo {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  
+  .vendorInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 11px;
+    color: #a99884;
+  }
+  
+  /* ---- Divider ---- */
+  .divider {
+    height: 1px;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.12) 0,
+      rgba(255, 255, 255, 0.12) 4px,
+      transparent 4px,
+      transparent 8px
+    );
+    margin: 0 24px;
+  }
+  
+  /* ---- Meta grid ---- */
+  .metaGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    padding: 18px 24px;
+  }
+  
+  .metaItem {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  
+  .metaLabel {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #8a7d6c;
+  }
+  
+  .metaValue {
+    font-size: 12.5px;
+    font-weight: 600;
+    font-family: 'Courier New', monospace;
+  }
+  
+  /* ---- Items ---- */
+  .itemsBlock {
+    padding: 18px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  .itemRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .itemThumb {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: linear-gradient(160deg, #c98a3e, #5a3d20);
+    flex-shrink: 0;
+  }
+  
+  .itemInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .itemName {
+    font-size: 13px;
+    font-weight: 700;
+  }
+  
+  .itemVariant {
+    font-size: 11px;
+    color: #8a7d6c;
+  }
+  
+  .itemPrice {
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+  }
+  
+  /* ---- Totals ---- */
+  .totalsBlock {
+    padding: 16px 24px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  
+  .totalRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12.5px;
+    color: #a99884;
+    font-family: 'Courier New', monospace;
+  }
+  
+  .totalFinal {
+    margin-top: 6px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+  }
+  
+  /* ---- Perforation ---- */
+  .perforation {
+    height: 0;
+    border-top: 1.5px dashed rgba(255, 255, 255, 0.15);
+    margin: 0;
+    position: relative;
+  }
+  .perforation::before,
+  .perforation::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #0b0906;
+  }
+  .perforation::before { left: -8px; }
+  .perforation::after { right: -8px; }
+  
+  /* ---- Tracking ---- */
+  .trackingBlock {
+    padding: 20px 24px;
+  }
+  
+  .trackingHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12.5px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  
+  .trackingStatus {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(55, 226, 255, 0.15);
+    color: #7ee0f5;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  
+  .trackingAddress {
+    font-size: 12px;
+    color: #a99884;
+    margin: 0 0 12px;
+    line-height: 1.5;
+  }
+  
+  .trackingRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .trackingLabel {
+    font-size: 10.5px;
+    color: #8a7d6c;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  
+  .trackingCopy {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    padding: 6px 10px;
+    color: #f1ece5;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .trackingNum {
+    font-family: 'Courier New', monospace;
+    color: #c4744a;
+  }
+  
+  /* ---- Support ---- */
+  .supportBlock {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 24px 20px;
+    padding: 14px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .supportIcon {
+    font-size: 18px;
+  }
+  
+  .supportTitle {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 700;
+  }
+  
+  .supportSub {
+    display: block;
+    font-size: 11px;
+    color: #8a7d6c;
+    margin-top: 2px;
+  }
+  
+  /* ---- Feedback ---- */
+  .feedbackBlock {
+    padding: 20px 24px 6px;
+    text-align: center;
+  }
+  
+  .feedbackLabel {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #cbbfae;
+    margin-bottom: 10px;
+  }
+  
+  .starRow {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+  }
+  
+  .star {
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #3a2e22;
+    cursor: pointer;
+    transition: transform 0.1s, color 0.15s;
+  }
+  .star:hover {
+    transform: scale(1.15);
+  }
+  .starFilled {
+    color: #ffc864;
+  }
+  
+  /* ---- Bottom promo / QR ---- */
+  .bottomPromo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+  }
+  
+  .qrCode {
+    width: 64px;
+    height: 64px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 6px;
+    flex-shrink: 0;
+  }
+  
+  .qrGrid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1px;
+  }
+  
+  .qrGrid span {
+    background: transparent;
+  }
+  .qrDark {
+    background: #0b0906 !important;
+  }
+  
+  .promoText {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  
+  .promoTitle {
+    font-size: 13px;
+    font-weight: 700;
+  }
+  
+  .promoSub {
+    font-size: 11px;
+    color: #8a7d6c;
+  }
+  
+  /* ---- Footer ---- */
+  .footerNote {
+    text-align: center;
+    font-size: 10.5px;
+    color: #6a5d4e;
+    line-height: 1.6;
+    padding: 10px 24px 26px;
+  }
+  
+  /* ---- Responsive ---- */
+  @media (max-width: 460px) {
+    .metaGrid {
+      grid-template-columns: 1fr;
+    }
+  }

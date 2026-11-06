@@ -1,0 +1,300 @@
+.page {
+    min-height: 100vh;
+    background: radial-gradient(circle at 50% 0%, #1a1030, #05050c 60%);
+    color: #f1f1f5;
+    padding: 60px 24px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .stars {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 20px 30px, #fff, transparent),
+      radial-gradient(1px 1px at 90px 80px, #fff, transparent),
+      radial-gradient(1px 1px at 160px 40px, #fff, transparent),
+      radial-gradient(1px 1px at 220px 120px, #fff, transparent),
+      radial-gradient(2px 2px at 300px 60px, #fff, transparent),
+      radial-gradient(1px 1px at 50px 150px, #fff, transparent),
+      radial-gradient(1px 1px at 380px 200px, #fff, transparent);
+    background-repeat: repeat;
+    background-size: 400px 250px;
+    opacity: 0.4;
+  }
+  
+  .wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(255, 138, 92, 0.12);
+    border: 1px solid rgba(255, 138, 92, 0.35);
+    color: #ffb199;
+    margin-bottom: 14px;
+  }
+  
+  .wrap h1 {
+    font-size: 26px;
+    font-weight: 800;
+    margin: 0 0 28px;
+  }
+  
+  /* ---- Presets ---- */
+  .presetRow {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+  
+  .presetBtn {
+    padding: 8px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: transparent;
+    color: #c4c4d2;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .presetBtn:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.06);
+  }
+  .presetBtn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  .presetBtnActive {
+    background: linear-gradient(135deg, #ff8a5c, #ff5f5f);
+    border-color: transparent;
+    color: #fff;
+  }
+  
+  /* ---- Ring scene ---- */
+  .ringScene {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto 34px;
+  }
+  
+  .ringSvg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+  
+  .ringTrack {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.08);
+    stroke-width: 8;
+  }
+  
+  .ringProgress {
+    fill: none;
+    stroke: url(#none);
+    stroke: #ff8a5c;
+    stroke-width: 8;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s linear, stroke 0.3s;
+  }
+  
+  .ringComplete {
+    stroke: #4dff88;
+  }
+  
+  .ringCenter {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .timeText {
+    font-size: 44px;
+    font-weight: 800;
+    font-family: 'Courier New', monospace;
+    letter-spacing: -0.02em;
+  }
+  
+  .timeUrgent {
+    color: #ff5f5f;
+    animation: pulse 1s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+  }
+  
+  .statusText {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #9a9aab;
+    font-weight: 600;
+  }
+  
+  .rocket {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+  }
+  
+  .rocketLaunch {
+    animation: liftoff 1.4s cubic-bezier(0.4, 0, 0.6, 1) forwards;
+  }
+  @keyframes liftoff {
+    0% { transform: translateX(-50%) translateY(0) rotate(0deg); opacity: 1; }
+    15% { transform: translateX(-50%) translateY(-4px) rotate(-3deg); }
+    100% { transform: translateX(-50%) translateY(-500px) rotate(0deg); opacity: 0; }
+  }
+  
+  .flame {
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 24px;
+    background: linear-gradient(180deg, #ffe08a, #ff8a3d 60%, transparent);
+    border-radius: 50%;
+    animation: flameFlicker 0.15s infinite alternate;
+  }
+  @keyframes flameFlicker {
+    from { opacity: 0.7; height: 20px; }
+    to { opacity: 1; height: 28px; }
+  }
+  
+  /* ---- Controls ---- */
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+  
+  .launchBtn {
+    padding: 14px 30px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, #ff8a5c, #ff5f5f);
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(255, 95, 95, 0.35);
+    transition: transform 0.15s;
+  }
+  .launchBtn:hover {
+    transform: translateY(-2px);
+  }
+  
+  .holdBtn {
+    padding: 14px 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 184, 77, 0.5);
+    background: rgba(255, 184, 77, 0.12);
+    color: #ffd699;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .resetBtn {
+    padding: 14px 24px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.04);
+    color: #c4c4d2;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .resetBtn:hover {
+    background: rgba(255, 255, 255, 0.09);
+  }
+  
+  /* ---- Mission log ---- */
+  .log {
+    text-align: left;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 18px 20px;
+  }
+  
+  .logHeader {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #ff8a5c;
+    margin-bottom: 12px;
+  }
+  
+  .logList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 160px;
+    overflow-y: auto;
+  }
+  
+  .logEmpty {
+    font-size: 12.5px;
+    color: #7a7a8c;
+    font-style: italic;
+  }
+  
+  .logRow {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 12.5px;
+    color: #c4c4d2;
+    font-family: 'Courier New', monospace;
+    animation: logIn 0.2s ease;
+  }
+  
+  @keyframes logIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .logDot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #ff8a5c;
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+  
+  /* ---- Responsive ---- */
+  @media (max-width: 480px) {
+    .ringScene {
+      width: 240px;
+      height: 240px;
+    }
+    .timeText {
+      font-size: 36px;
+    }
+  }

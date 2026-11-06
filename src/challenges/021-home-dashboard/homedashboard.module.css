@@ -1,0 +1,394 @@
+.page {
+    min-height: 100vh;
+    background: radial-gradient(circle at 20% 5%, #1a1a2e, #0b0b16 55%);
+    padding: 60px 24px 80px;
+    color: #f1f1f5;
+  }
+  
+  .wrap {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  /* ---- Header ---- */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #7c6cff;
+    margin-bottom: 6px;
+  }
+  
+  .header h1 {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0;
+  }
+  
+  .tempPill {
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* ---- Status banner ---- */
+  .statusBanner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 22px;
+    border-radius: 18px;
+    margin-bottom: 24px;
+    border: 1px solid;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .statusSecure {
+    background: rgba(77, 255, 136, 0.08);
+    border-color: rgba(77, 255, 136, 0.3);
+  }
+  
+  .statusAlert {
+    background: rgba(255, 184, 77, 0.08);
+    border-color: rgba(255, 184, 77, 0.35);
+  }
+  
+  .statusLeft {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  .statusDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #4dff88;
+    flex-shrink: 0;
+  }
+  
+  .statusAlert .statusDot {
+    background: #ffb84d;
+  }
+  
+  .statusDotPulse {
+    box-shadow: 0 0 0 0 currentColor;
+    animation: dotPulse 1.2s ease-out;
+  }
+  @keyframes dotPulse {
+    0% { box-shadow: 0 0 0 0 rgba(77, 255, 136, 0.5); }
+    100% { box-shadow: 0 0 0 10px rgba(77, 255, 136, 0); }
+  }
+  
+  .statusTitle {
+    display: block;
+    font-size: 14.5px;
+    font-weight: 700;
+  }
+  
+  .statusSub {
+    display: block;
+    font-size: 12px;
+    color: #9a9aab;
+    margin-top: 2px;
+  }
+  
+  .statusAction {
+    padding: 9px 18px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    font-size: 12.5px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  /* ---- Grid ---- */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 20px;
+  }
+  
+  .cardWide {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 20px;
+    grid-column: span 2;
+  }
+  
+  .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 16px;
+  }
+  
+  .cardTitle {
+    font-size: 13.5px;
+    font-weight: 700;
+  }
+  
+  .cardSub {
+    font-size: 11.5px;
+    color: #8a8a9a;
+  }
+  
+  /* ---- Cameras ---- */
+  .camGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  
+  .camThumb {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0;
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .camThumb:hover {
+    transform: translateY(-2px);
+  }
+  .camThumbActive {
+    border-color: var(--cam-color, #7c6cff);
+  }
+  
+  .camPreview {
+    height: 70px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 8px;
+  }
+  
+  .liveTag {
+    font-size: 8.5px;
+    font-weight: 800;
+    color: #ff5f5f;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  
+  .camMeta {
+    padding: 8px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    text-align: left;
+  }
+  
+  .camName {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #f1f1f5;
+  }
+  
+  .camActivity {
+    font-size: 10px;
+    color: #7a7a8c;
+  }
+  
+  .camActivityAlert {
+    font-size: 10px;
+    color: #ffb84d;
+    font-weight: 600;
+  }
+  
+  /* ---- Energy ---- */
+  .energyChart {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    height: 90px;
+    margin-bottom: 8px;
+  }
+  
+  .energyBarTrack {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .energyBar {
+    width: 100%;
+    background: linear-gradient(180deg, #37e2ff, #1a9dc4);
+    border-radius: 3px 3px 0 0;
+    min-height: 3px;
+  }
+  
+  .energyLabels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10.5px;
+    color: #7a7a8c;
+  }
+  
+  /* ---- Sensors ---- */
+  .sensorList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .sensorRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .sensorIcon {
+    font-size: 14px;
+    width: 20px;
+  }
+  
+  .sensorName {
+    flex: 1;
+    font-size: 12.5px;
+    color: #c4c4d2;
+  }
+  
+  .sensorState {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  
+  .stateOk {
+    background: rgba(77, 255, 136, 0.12);
+    color: #a4ffc4;
+  }
+  
+  .stateAlert {
+    background: rgba(255, 184, 77, 0.15);
+    color: #ffd699;
+  }
+  
+  /* ---- Climate ---- */
+  .climateRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  
+  .climateBig {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .climateTemp {
+    font-size: 34px;
+    font-weight: 800;
+  }
+  
+  .climateLabel {
+    font-size: 11.5px;
+    color: #8a8a9a;
+  }
+  
+  .climateStats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .climateStat {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 12px;
+    color: #c4c4d2;
+  }
+  
+  .aqGood {
+    color: #4dff88;
+    font-weight: 700;
+  }
+  
+  /* ---- Activity feed ---- */
+  .feedList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .feedRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .feedIcon {
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.06);
+  }
+  .feedIconwarn {
+    background: rgba(255, 184, 77, 0.15);
+  }
+  .feedIconsuccess {
+    background: rgba(77, 255, 136, 0.12);
+  }
+  
+  .feedText {
+    flex: 1;
+    font-size: 12.5px;
+    color: #d4d4dc;
+  }
+  
+  .feedTime {
+    font-size: 11px;
+    color: #7a7a8c;
+    flex-shrink: 0;
+  }
+  
+  /* ---- Responsive ---- */
+  @media (max-width: 760px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+    .cardWide {
+      grid-column: span 1;
+    }
+    .camGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }

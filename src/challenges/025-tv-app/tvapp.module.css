@@ -1,0 +1,362 @@
+.page {
+    min-height: 100vh;
+    background: #0b0b16;
+    color: #f1f1f5;
+    padding-bottom: 60px;
+    outline: none;
+  }
+  
+  /* ---- Top nav ---- */
+  .topNav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 24px 50px;
+  }
+  
+  .logo {
+    font-weight: 800;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  
+  .navLinks {
+    display: flex;
+    gap: 26px;
+    font-size: 13px;
+    color: #9a9aab;
+    flex: 1;
+  }
+  
+  .navActive {
+    color: #fff;
+    font-weight: 700;
+  }
+  
+  .profileDot {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ff8a5c, #ff5fa2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+  
+  /* ---- Hero ---- */
+  .hero {
+    position: relative;
+    padding: 50px 50px 70px;
+    overflow: hidden;
+  }
+  
+  .heroGlow {
+    position: absolute;
+    top: -20%;
+    left: 10%;
+    width: 500px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(124, 108, 255, 0.3), transparent 70%);
+    filter: blur(30px);
+  }
+  
+  .heroTag {
+    position: relative;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: rgba(124, 108, 255, 0.15);
+    color: #b7aeff;
+    margin-bottom: 16px;
+  }
+  
+  .hero h1 {
+    position: relative;
+    font-size: 40px;
+    font-weight: 800;
+    margin: 0 0 14px;
+    max-width: 560px;
+  }
+  
+  .hero p {
+    position: relative;
+    font-size: 14px;
+    color: #c4c4d2;
+    max-width: 480px;
+    line-height: 1.6;
+    margin: 0 0 26px;
+  }
+  
+  .heroActions {
+    position: relative;
+    display: flex;
+    gap: 12px;
+  }
+  
+  .playBtn {
+    padding: 13px 26px;
+    border-radius: 10px;
+    border: none;
+    background: #fff;
+    color: #0b0b16;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .infoBtn {
+    padding: 13px 22px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  /* ---- Rows ---- */
+  .rows {
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .rowLabel {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  
+  .rowScroll {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  
+  .card {
+    position: relative;
+    flex-shrink: 0;
+    width: 180px;
+    background: none;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.15s, border-color 0.15s;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .cardWide {
+    width: 260px;
+  }
+  
+  .cardFocused {
+    transform: scale(1.08);
+    border-color: var(--card-color, #7c6cff);
+    z-index: 5;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  }
+  
+  .cardArt {
+    height: 100px;
+    border-radius: 10px;
+  }
+  
+  .cardWide .cardArt {
+    height: 130px;
+  }
+  
+  .progressBar {
+    height: 3px;
+    background: rgba(255, 255, 255, 0.15);
+    margin-top: -3px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .progressFill {
+    height: 100%;
+    background: #ff5f5f;
+  }
+  
+  .cardTitle {
+    font-size: 12.5px;
+    font-weight: 700;
+    padding: 8px 4px 2px;
+    color: #f1f1f5;
+  }
+  
+  .cardMeta {
+    font-size: 10.5px;
+    color: #8a8a9a;
+    padding: 0 4px;
+  }
+  
+  /* ---- Hint ---- */
+  .hint {
+    text-align: center;
+    font-size: 11px;
+    color: #5a5a6a;
+    margin-top: 40px;
+  }
+  
+  /* ---- Player overlay ---- */
+  .playerOverlay {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .playerVisual {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  
+  .closeBtn {
+    position: absolute;
+    top: 24px;
+    right: 30px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  .playerVisual h2 {
+    font-size: 22px;
+    font-weight: 800;
+  }
+  
+  .playerCenter {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .playerControls {
+    padding: 16px 40px 30px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.9), transparent);
+  }
+  
+  .seekTrack {
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.2);
+    margin-bottom: 18px;
+    overflow: hidden;
+  }
+  
+  .seekFill {
+    height: 100%;
+    background: #7c6cff;
+  }
+  
+  .controlsRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  
+  .controlsLeft, .controlsRight {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  .ctrlBtn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+  }
+  
+  .ctrlBtnBig {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .volumeGroup {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .volSlider {
+    width: 80px;
+    accent-color: #7c6cff;
+  }
+  
+  .ccBtn {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    color: #c4c4d2;
+    font-size: 11px;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  .ccBtnActive {
+    background: #fff;
+    color: #0b0b16;
+    border-color: transparent;
+  }
+  
+  .langBtn {
+    padding: 7px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  /* ---- Responsive ---- */
+  @media (max-width: 760px) {
+    .topNav, .hero, .rows {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .navLinks {
+      display: none;
+    }
+    .hero h1 {
+      font-size: 28px;
+    }
+  }

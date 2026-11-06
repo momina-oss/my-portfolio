@@ -1,0 +1,380 @@
+.page {
+    min-height: 100vh;
+    background: radial-gradient(circle at 20% 10%, #1a1a2e, #0b0b16 55%);
+    padding: 70px 24px 100px;
+    color: #f1f1f5;
+  }
+  
+  .wrap {
+    max-width: 520px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #7c6cff;
+    margin-bottom: 10px;
+  }
+  
+  .wrap h1 {
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0 0 10px;
+  }
+  
+  .sub {
+    font-size: 13.5px;
+    color: #9a9aab;
+    line-height: 1.6;
+    max-width: 420px;
+    margin: 0 auto 36px;
+  }
+  
+  /* ---- Trigger buttons ---- */
+  .triggerRow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 46px;
+  }
+  
+  .triggerBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.03);
+    color: #e4e4ec;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: transform 0.15s, border-color 0.15s;
+  }
+  .triggerBtn:hover {
+    transform: translateY(-2px);
+  }
+  
+  .triggerIcon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+  
+  .trigger-success .triggerIcon { background: #4dff88; color: #06130c; }
+  .trigger-error .triggerIcon { background: #ff5f5f; color: #fff; }
+  .trigger-warning .triggerIcon { background: #ffb84d; color: #302000; }
+  .trigger-info .triggerIcon { background: #37e2ff; color: #06131a; }
+  
+  .trigger-success:hover { border-color: rgba(77, 255, 136, 0.5); }
+  .trigger-error:hover { border-color: rgba(255, 95, 95, 0.5); }
+  .trigger-warning:hover { border-color: rgba(255, 184, 77, 0.5); }
+  .trigger-info:hover { border-color: rgba(55, 226, 255, 0.5); }
+  
+  /* ---- Form demo ---- */
+  .formDemo {
+    text-align: left;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 40px;
+  }
+  
+  .formDemoHeader {
+    font-size: 12px;
+    font-weight: 700;
+    color: #7c6cff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 16px;
+  }
+  
+  .fakeField {
+    margin-bottom: 16px;
+  }
+  
+  .fakeField span {
+    display: block;
+    font-size: 12px;
+    color: #9a9aab;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  
+  .fakeInput {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.04);
+    font-size: 13px;
+    color: #c4c4d2;
+  }
+  
+  .inlineFlash {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    margin-top: 12px;
+    border: 1px solid;
+  }
+  
+  .flashIcon {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 800;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  
+  .flashText {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .flashText strong {
+    font-size: 13px;
+  }
+  
+  .flashText span {
+    font-size: 12px;
+    opacity: 0.85;
+  }
+  
+  .flashClose {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: inherit;
+    opacity: 0.6;
+    line-height: 1;
+  }
+  .flashClose:hover {
+    opacity: 1;
+  }
+  
+  .flashSuccess {
+    background: rgba(77, 255, 136, 0.1);
+    border-color: rgba(77, 255, 136, 0.3);
+    color: #a4ffc4;
+  }
+  .flashSuccess .flashIcon { background: #4dff88; color: #06130c; }
+  
+  .flashError {
+    background: rgba(255, 95, 95, 0.1);
+    border-color: rgba(255, 95, 95, 0.3);
+    color: #ff9c9c;
+  }
+  .flashError .flashIcon { background: #ff5f5f; color: #fff; }
+  
+  .resetBtn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 10px;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    background: none;
+    color: #9a9aab;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  /* ---- Persistent banners ---- */
+  .bannerSection {
+    text-align: left;
+  }
+  
+  .eyebrowSmall {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #7c6cff;
+    margin-bottom: 14px;
+  }
+  
+  .banner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 16px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    border: 1px solid;
+  }
+  
+  .bannerIcon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+  
+  .bannerWarning {
+    background: rgba(255, 184, 77, 0.1);
+    border-color: rgba(255, 184, 77, 0.3);
+    color: #ffd699;
+  }
+  .bannerWarning .bannerIcon { background: #ffb84d; color: #302000; }
+  
+  .bannerInfo {
+    background: rgba(55, 226, 255, 0.08);
+    border-color: rgba(55, 226, 255, 0.25);
+    color: #a8ecff;
+  }
+  .bannerInfo .bannerIcon { background: #37e2ff; color: #06131a; }
+  
+  .banner span {
+    flex: 1;
+  }
+  
+  .bannerAction {
+    padding: 7px 14px;
+    border-radius: 8px;
+    border: none;
+    background: #ffb84d;
+    color: #302000;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  /* ---- Toast stack ---- */
+  .toastStack {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 100;
+    width: 320px;
+  }
+  
+  .toast {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: #14141f;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    animation: slideIn 0.25s ease;
+  }
+  
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  .toastIcon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 800;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  
+  .toast-success .toastIcon { background: #4dff88; color: #06130c; }
+  .toast-error .toastIcon { background: #ff5f5f; color: #fff; }
+  .toast-warning .toastIcon { background: #ffb84d; color: #302000; }
+  .toast-info .toastIcon { background: #37e2ff; color: #06131a; }
+  
+  .toastText {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  
+  .toastText strong {
+    font-size: 13px;
+    color: #f1f1f5;
+  }
+  
+  .toastText span {
+    font-size: 12px;
+    color: #9a9aab;
+    line-height: 1.4;
+  }
+  
+  .toastClose {
+    background: none;
+    border: none;
+    font-size: 15px;
+    color: #7a7a8c;
+    cursor: pointer;
+    line-height: 1;
+  }
+  .toastClose:hover {
+    color: #fff;
+  }
+  
+  .toastProgress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: currentColor;
+    animation: shrink 4s linear forwards;
+  }
+  .toast-success .toastProgress { background: #4dff88; }
+  .toast-error .toastProgress { background: #ff5f5f; }
+  .toast-warning .toastProgress { background: #ffb84d; }
+  .toast-info .toastProgress { background: #37e2ff; }
+  
+  @keyframes shrink {
+    from { width: 100%; }
+    to { width: 0%; }
+  }
+  
+  /* ---- Responsive ---- */
+  @media (max-width: 480px) {
+    .triggerRow {
+      grid-template-columns: 1fr;
+    }
+    .toastStack {
+      left: 16px;
+      right: 16px;
+      width: auto;
+      top: 16px;
+    }
+  }

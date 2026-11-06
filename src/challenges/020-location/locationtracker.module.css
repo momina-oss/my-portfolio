@@ -1,0 +1,387 @@
+.page {
+    min-height: 100vh;
+    background: #05050a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  
+  .frame {
+    position: relative;
+    width: 380px;
+    height: 680px;
+    background: #0e0e16;
+    border-radius: 36px;
+    overflow: hidden;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  /* ---- Map ---- */
+  .map {
+    position: absolute;
+    inset: 0;
+  }
+  
+  .streets {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .street {
+    stroke: rgba(255, 255, 255, 0.06);
+    stroke-width: 2;
+  }
+  
+  .avenue {
+    stroke: rgba(255, 255, 255, 0.04);
+    stroke-width: 3;
+  }
+  
+  .park {
+    fill: rgba(77, 255, 136, 0.06);
+    stroke: rgba(77, 255, 136, 0.15);
+    stroke-width: 1;
+  }
+  
+  .water {
+    fill: rgba(55, 226, 255, 0.06);
+  }
+  
+  /* ---- Me marker ---- */
+  .meMarker {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  
+  .meDot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #37e2ff;
+    border: 3px solid #fff;
+    box-shadow: 0 0 12px rgba(55, 226, 255, 0.8);
+    position: relative;
+    z-index: 2;
+  }
+  
+  .meRing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(55, 226, 255, 0.25);
+    transform: translate(-50%, -50%);
+    animation: radar 2s ease-out infinite;
+  }
+  
+  @keyframes radar {
+    0% { transform: translate(-50%, -50%) scale(0.3); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(2.2); opacity: 0; }
+  }
+  
+  /* ---- Friend pins ---- */
+  .pin {
+    position: absolute;
+    transform: translate(-50%, -100%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+  }
+  
+  .pinPulse {
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    opacity: 0.35;
+    animation: pinPulse 2.4s ease-out infinite;
+  }
+  
+  @keyframes pinPulse {
+    0% { transform: translateX(-50%) scale(0.6); opacity: 0.4; }
+    100% { transform: translateX(-50%) scale(1.8); opacity: 0; }
+  }
+  
+  .pinAvatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50% 50% 50% 4px;
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #0e0e16;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+    position: relative;
+  }
+  .pinAvatar::after {
+    content: attr(data-initial);
+  }
+  
+  .pin span.pinAvatar {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+  }
+  .pin .pinAvatar {
+    transform: rotate(45deg);
+  }
+  .pin span:not(.pinPulse):not(.pinLabel) {
+    transform: rotate(45deg);
+  }
+  
+  .pinActive .pinAvatar {
+    transform: rotate(45deg) scale(1.2);
+    border-color: #fff;
+  }
+  
+  .pinLabel {
+    margin-top: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 3px 8px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  
+  /* Fix rotation: avatar letter should be upright */
+  .pinAvatar {
+    transform: rotate(45deg);
+  }
+  
+  /* ---- Top bar ---- */
+  .topBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 40px;
+    background: linear-gradient(180deg, rgba(5, 5, 10, 0.85), transparent);
+    z-index: 5;
+  }
+  
+  .topBarTitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  .liveDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4dff88;
+    box-shadow: 0 0 8px rgba(77, 255, 136, 0.8);
+    animation: blink 1.6s infinite;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  
+  .recenterBtn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  /* ---- Bottom sheet ---- */
+  .sheet {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #14141f;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px 24px 0 0;
+    padding: 10px 18px 20px;
+    z-index: 10;
+    box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.4);
+    max-height: 130px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .sheetExpanded {
+    max-height: 420px;
+  }
+  
+  .sheetHandle {
+    width: 36px;
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    margin: 0 auto 14px;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .selectedCard {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .selectedAvatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  
+  .selectedInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+  
+  .selectedName {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  .selectedStatus {
+    font-size: 12px;
+    color: #9a9aab;
+  }
+  
+  .selectedMeta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+  
+  .batteryTag {
+    font-size: 11px;
+    color: #c4c4d2;
+  }
+  
+  .updateTag {
+    font-size: 10px;
+    color: #4dff88;
+    font-weight: 600;
+  }
+  
+  .peopleList {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .personRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.15s;
+  }
+  .personRow:hover {
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .personRowActive {
+    background: rgba(124, 108, 255, 0.12);
+  }
+  
+  .rowAvatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 800;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  
+  .rowInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+  
+  .rowName {
+    font-size: 13px;
+    font-weight: 700;
+    color: #f1f1f5;
+  }
+  
+  .rowStatus {
+    font-size: 11px;
+    color: #8a8a9a;
+  }
+  
+  .rowEta {
+    font-size: 11px;
+    font-weight: 700;
+    color: #37e2ff;
+    flex-shrink: 0;
+  }
+  
+  .shareBtn {
+    margin-top: 8px;
+    padding: 13px;
+    border-radius: 12px;
+    border: 1px dashed rgba(124, 108, 255, 0.4);
+    background: rgba(124, 108, 255, 0.08);
+    color: #b7aeff;
+    font-size: 12.5px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  /* ---- Responsive ---- */
+  @media (max-width: 420px) {
+    .frame {
+      width: 100%;
+      max-width: 380px;
+      height: 88vh;
+    }
+  }

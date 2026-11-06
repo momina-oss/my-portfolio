@@ -1,0 +1,360 @@
+.page {
+    min-height: 100vh;
+    background: radial-gradient(circle at 20% 10%, #1a1a2e, #0b0b16 55%);
+    padding: 60px 24px 80px;
+    color: #f1f1f5;
+  }
+  
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    margin-bottom: 26px;
+  }
+  
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #7c6cff;
+    margin-bottom: 8px;
+  }
+  
+  .header h1 {
+    font-size: 26px;
+    font-weight: 800;
+    margin: 0 0 6px;
+  }
+  
+  .sub {
+    font-size: 13px;
+    color: #9a9aab;
+    margin: 0;
+  }
+  
+  /* ---- Away mode master card ---- */
+  .awayCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 22px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 32px;
+    transition: all 0.3s;
+  }
+  
+  .awayCardActive {
+    background: linear-gradient(135deg, rgba(124, 108, 255, 0.16), rgba(124, 108, 255, 0.04));
+    border-color: rgba(124, 108, 255, 0.4);
+  }
+  
+  .awayText {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  .awayIcon {
+    font-size: 26px;
+  }
+  
+  .awayTitle {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  
+  .awaySub {
+    font-size: 12px;
+    color: #9a9aab;
+    margin-top: 3px;
+  }
+  
+  .masterSwitch {
+    width: 56px;
+    height: 32px;
+    border-radius: 999px;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.25s;
+  }
+  .masterSwitchOn {
+    background: linear-gradient(135deg, #7c6cff, #4d3fd6);
+  }
+  .masterKnob {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform 0.25s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  .masterSwitchOn .masterKnob {
+    transform: translateX(24px);
+  }
+  
+  /* ---- Section label ---- */
+  .sectionLabel {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #7a7a8c;
+    margin-bottom: 12px;
+  }
+  
+  /* ---- Light cards ---- */
+  .lightGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  
+  .lightCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 16px;
+    transition: all 0.25s;
+  }
+  
+  .lightCardOn {
+    background: linear-gradient(180deg, rgba(255, 200, 100, 0.1), rgba(255, 255, 255, 0.03));
+    border-color: rgba(255, 200, 100, 0.35);
+    box-shadow: 0 0 24px rgba(255, 200, 100, 0.08);
+  }
+  
+  .lightTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .bulbIcon {
+    font-size: 18px;
+  }
+  
+  .lightName {
+    font-size: 12.5px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  /* ---- Mini switch (reused for lights, thermo, fan) ---- */
+  .miniSwitch {
+    width: 38px;
+    height: 22px;
+    border-radius: 999px;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    position: relative;
+    cursor: pointer;
+    transition: background 0.2s;
+    flex-shrink: 0;
+  }
+  .miniSwitch:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  .miniSwitchOn {
+    background: linear-gradient(135deg, #ffc864, #ff9a3d);
+  }
+  .miniKnob {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform 0.2s;
+  }
+  .miniSwitchOn .miniKnob {
+    transform: translateX(16px);
+  }
+  
+  /* ---- Brightness controls ---- */
+  .brightnessRow {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+  
+  .dimBtn {
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    color: #e4e4ec;
+    font-size: 13px;
+    cursor: pointer;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .dimBtn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+  
+  .brightnessBar {
+    flex: 1;
+    height: 5px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+  
+  .brightnessFill {
+    height: 100%;
+    background: linear-gradient(90deg, #ffc864, #ff9a3d);
+    border-radius: 999px;
+    transition: width 0.2s;
+  }
+  
+  .brightnessLabel {
+    font-size: 10.5px;
+    color: #8a8a9a;
+  }
+  
+  /* ---- Device grid (lock, thermo, fan) ---- */
+  .deviceGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  
+  .deviceCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 16px;
+  }
+  
+  .deviceHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  
+  .deviceIcon {
+    font-size: 17px;
+  }
+  
+  .spinning {
+    display: inline-block;
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .deviceName {
+    font-size: 12px;
+    font-weight: 700;
+    flex: 1;
+  }
+  
+  /* ---- Lock toggle (distinct visual state, not a generic switch) ---- */
+  .lockToggle {
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 12px;
+    border: 1px solid;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .lockToggleLocked {
+    background: rgba(77, 255, 136, 0.1);
+    border-color: rgba(77, 255, 136, 0.35);
+    color: #a4ffc4;
+  }
+  
+  .lockToggleUnlocked {
+    background: rgba(255, 95, 95, 0.1);
+    border-color: rgba(255, 95, 95, 0.35);
+    color: #ff9c9c;
+  }
+  
+  /* ---- Thermostat ---- */
+  .tempRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .tempBtn {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    color: #e4e4ec;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .tempBtn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+  
+  .tempValue {
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Courier New', monospace;
+  }
+  
+  /* ---- Fan speed ---- */
+  .speedRow {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .speedDot {
+    flex: 1;
+    padding: 8px 0;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.03);
+    color: #9a9aab;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .speedDot:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+  .speedDotActive {
+    background: linear-gradient(135deg, #37e2ff, #1a9dc4);
+    border-color: transparent;
+    color: #06131a;
+  }
+  
+  /* ---- Responsive ---- */
+  @media (max-width: 560px) {
+    .lightGrid, .deviceGrid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .lightGrid > *:last-child {
+      grid-column: span 2;
+    }
+  }

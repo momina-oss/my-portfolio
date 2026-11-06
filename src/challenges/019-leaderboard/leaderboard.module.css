@@ -1,0 +1,298 @@
+.page {
+    min-height: 100vh;
+    background: radial-gradient(circle at 20% 10%, #1a1a2e, #0b0b16 55%);
+    padding: 60px 24px 100px;
+    color: #f1f1f5;
+  }
+  
+  .wrap {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #7c6cff;
+    margin-bottom: 6px;
+  }
+  
+  .header h1 {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0;
+  }
+  
+  .periodToggle {
+    display: flex;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 4px;
+  }
+  
+  .periodBtn {
+    padding: 7px 13px;
+    border-radius: 7px;
+    border: none;
+    background: transparent;
+    color: #9a9aab;
+    font-size: 11.5px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .periodBtnActive {
+    background: linear-gradient(135deg, #7c6cff, #4d3fd6);
+    color: #fff;
+  }
+  
+  /* ---- Podium ---- */
+  .podium {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    padding: 0 10px;
+  }
+  
+  .podiumCol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    max-width: 120px;
+  }
+  
+  .podiumAvatarWrap {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .crown {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+  }
+  
+  .podiumAvatar {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+    border: 3px solid #0e0e18;
+  }
+  
+  .podiumFirst .podiumAvatar {
+    width: 66px;
+    height: 66px;
+    font-size: 19px;
+  }
+  
+  .podiumAvatarMe {
+    box-shadow: 0 0 0 3px #7c6cff;
+  }
+  
+  .rankBadge {
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 800;
+    border: 2px solid #0e0e18;
+  }
+  .rankBadge1 { background: #ffd166; color: #302000; }
+  .rankBadge2 { background: #c4c4d2; color: #17171f; }
+  .rankBadge3 { background: #d38a5c; color: #241205; }
+  
+  .podiumName {
+    font-size: 12.5px;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+  
+  .podiumTime {
+    font-size: 11px;
+    color: #9a9aab;
+    margin-bottom: 10px;
+  }
+  
+  .podiumBar {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    min-height: 30px;
+  }
+  .podiumBar1 { background: linear-gradient(180deg, #ffd166, #b8862e); }
+  .podiumBar2 { background: linear-gradient(180deg, #c4c4d2, #7a7a8c); }
+  .podiumBar3 { background: linear-gradient(180deg, #d38a5c, #8a5432); }
+  
+  /* ---- List ---- */
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  
+  .rowMe {
+    background: rgba(124, 108, 255, 0.1);
+    border-color: rgba(124, 108, 255, 0.35);
+  }
+  
+  .rowRank {
+    font-size: 12px;
+    font-weight: 700;
+    color: #7a7a8c;
+    width: 16px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  
+  .rowAvatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 800;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  
+  .rowInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100px;
+    flex-shrink: 0;
+  }
+  
+  .rowName {
+    font-size: 12.5px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .youTag {
+    font-size: 9px;
+    font-weight: 800;
+    background: #7c6cff;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 999px;
+    flex-shrink: 0;
+  }
+  
+  .rowStreak {
+    font-size: 10px;
+    color: #8a8a9a;
+  }
+  
+  .rowBarTrack {
+    flex: 1;
+    height: 5px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    min-width: 40px;
+  }
+  
+  .rowBarFill {
+    height: 100%;
+    border-radius: 999px;
+  }
+  
+  .rowTime {
+    font-size: 11.5px;
+    color: #c4c4d2;
+    font-weight: 600;
+    white-space: nowrap;
+    width: 50px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+  
+  .trendIcon {
+    width: 16px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+  .trendup { color: #4dff88; }
+  .trenddown { color: #ff5f5f; }
+  .trendsame { color: #6a6a7a; }
+  
+  /* ---- My rank footer ---- */
+  .myRankBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(124, 108, 255, 0.18), rgba(124, 108, 255, 0.05));
+    border: 1px solid rgba(124, 108, 255, 0.35);
+  }
+  
+  .myRankLabel {
+    font-size: 12px;
+    color: #b7aeff;
+    font-weight: 600;
+  }
+  
+  .myRankValue {
+    font-size: 14px;
+    font-weight: 800;
+  }
+  
+  /* ---- Responsive ---- */
+  @media (max-width: 420px) {
+    .rowInfo {
+      width: 70px;
+    }
+    .podium {
+      gap: 8px;
+    }
+  }
