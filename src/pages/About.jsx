@@ -5,7 +5,7 @@ import { profile, education, skills, certifications } from '../data'
 export default function About() {
   return (
     <>
-      <PageHeader eyebrow="About" title="Data, models and the interfaces around them">
+      <PageHeader eyebrow="About" title="Transforming Data into Intelligent Solutions">
         {profile.summary}
       </PageHeader>
 

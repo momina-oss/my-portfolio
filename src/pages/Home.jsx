@@ -69,15 +69,18 @@ export default function Home() {
     location = "Karachi, Pakistan"
 
     stack = [
-        "Python", "Scikit-learn", "XGBoost",
-        "React.js", "FastAPI", "MySQL",
+      "Python", "Scikit-learn", "XGBoost",
+      "React.js", "FastAPI", "MySQL",
+      "Power BI", "JavaScript",
     ]
 
     def focus(self):
         return [
-            "machine learning",
-            "data analytics",
-            "full-stack development",
+          "Machine Learning",
+          "Data Analytics",
+          "AI-powered applications",
+          "Full-Stack Development",
+          "Research & Leadership",
         ]`}
           </pre>
         </div>

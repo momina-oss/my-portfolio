@@ -1,13 +1,13 @@
 export const profile = {
   name: 'Momina Zahid',
   title: 'Data Science Undergraduate',
-  roles: ['Data Science Undergraduate', 'Machine Learning Enthusiast', 'Data Analytics', 'Full-Stack Developer'],
+  roles: ['Data Science Undergraduate', 'Machine Learning Enthusiast', 'Data Analyst', 'Full-Stack Developer'],
   email: 'mominazahid254@gmail.com',
   linkedin: 'https://www.linkedin.com/in/momina-zahid-a1468433b',
   github: 'https://github.com/momina-oss',
   location: 'Karachi, Pakistan',
   summary:
-    'Data Science undergraduate with experience in machine learning, data analytics, full-stack development, and database management. Skilled in Python, JavaScript, and React.js, with hands-on experience in AI-powered applications, research, and team leadership.',
+    'Data Science undergraduate with expertise in machine learning, data analytics, and full-stack development. Skilled in Python, JavaScript, React.js, and database management, with hands-on experience in AI-powered applications, research, project leadership, UI/UX design, and technical problem-solving. Passionate about transforming data into intelligent, user-focused solutions.',
 }
 
 export const education = [
@@ -32,12 +32,12 @@ export const skills = [
   {
     group: 'Data Science & Analytics',
     icon: '∑',
-    items: ['Data Analysis', 'Data Visualization', 'Machine Learning', 'Scikit-learn', 'XGBoost', 'Data Interpretation', 'Comparative Analysis'],
+    items: ['Power BI', 'Data Analysis', 'Data Visualization', 'Machine Learning', 'Scikit-learn', 'XGBoost', 'Data Interpretation', 'Comparative Analysis'],
   },
   {
     group: 'Design & Creative',
     icon: '◐',
-    items: ['Power BI', 'UI/UX Design', 'Figma', 'Adobe Illustrator', 'Adobe Photoshop', 'Adobe Lightroom', 'Canva', 'Visual Storytelling'],
+    items: ['UI/UX Design', 'Figma', 'Adobe Illustrator', 'Adobe Photoshop', 'Adobe Lightroom', 'Canva', 'Visual Storytelling'],
   },
   {
     group: 'Leadership & Professional',
@@ -57,21 +57,21 @@ export const experience = [
     org: 'ZeBuilders Pakistan',
     sub: 'Zeppelin Labs',
     period: '2026 – Present',
-    points: ['Lead brand communication, marketing, and community growth through creative content and visual design.'],
+    points: ['Leading brand communications, marketing initiatives, and community growth through creative content and visual design.'],
   },
   {
-    role: 'IT Intern',
+    role: 'Information Technology Intern – Team Lead',
     org: 'Alkhidmat Foundation, Karachi',
     sub: 'Summer Social Internship Program · IT Department',
     period: '2026',
-    points: ['Contributed to a full-stack Live Session Toolkit, covering frontend, backend, UI/UX, APIs, and database integration.'],
+    points: ['Led a team in building a full-stack Live Session Toolkit, contributing to frontend, backend, UI/UX, APIs, database integration, authentication, AI-powered features, and real-time communication using React.js, Python, and FastAPI.'],
   },
   {
     role: 'Judge Coordinator',
     org: 'JTECH 2025',
     sub: 'Event coordination',
     period: '2025',
-    points: ['Coordinated judge support and communication.', 'Received a Certificate of Appreciation.'],
+    points: ['Guided judges through project evaluations, facilitating interactions with participants and ensuring a smooth assessment process.', 'Provided coordination and communication support throughout the event.'],
   },
 ]
 

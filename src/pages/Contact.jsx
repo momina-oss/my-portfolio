@@ -24,8 +24,8 @@ export default function Contact() {
 
   return (
     <>
-      <PageHeader eyebrow="Contact" title="Let's talk">
-        Open to internships, collaborations and conversations about data science and development.
+      <PageHeader eyebrow="Contact" title="Let's Work Together">
+      Open to internships, collaborations, and opportunities to apply data science and development skills to real-world challenges.
       </PageHeader>
 
       <section className="container">
@@ -54,11 +54,11 @@ export default function Contact() {
           <form className="card contact-form" onSubmit={handleSubmit}>
             <h3 className="card-title">Send a message</h3>
             <div className="form-field">
-              <label>Your name</label>
+              <label>Your Name</label>
               <input name="name" value={form.name} onChange={handleChange} required placeholder="Full Name" />
             </div>
             <div className="form-field">
-              <label>Your email</label>
+              <label>Your Email</label>
               <input type="email" name="email" value={form.email} onChange={handleChange} required placeholder="you@email.com" />
             </div>
             <div className="form-field">
