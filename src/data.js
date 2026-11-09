@@ -81,15 +81,25 @@ export const projects = [
     category: 'Full-Stack',
     summary: 'Full-stack platform featuring AI-assisted activities, real-time communication, and analytics.',
     stack: ['React.js', 'FastAPI', 'Python', 'SQLite'],
-    highlights: ['AI-assisted activities', 'Real-time communication', 'Analytics'],
-    link: '',
+    highlights: [
+      'AI-assisted activities',
+      'Real-time communication',
+      'Analytics',
+    ],
+    image: '/projects/live-session.png',
+    link: 'https://github.com/momina-oss/Live_session_toolkit',
   },
   {
     title: 'Twitter Sentiment Analysis',
     category: 'Machine Learning',
     summary: 'ML-based sentiment classification and spam detection dashboard.',
     stack: ['Python', 'Scikit-learn', 'XGBoost', 'Flask'],
-    highlights: ['Sentiment classification', 'Spam detection', 'Interactive dashboard'],
+    highlights: [
+      'Sentiment classification',
+      'Spam detection',
+      'Interactive dashboard',
+    ],
+    image: '/projects/twitter-sentiment.png',
     link: '',
   },
   {
@@ -97,7 +107,12 @@ export const projects = [
     category: 'Machine Learning',
     summary: 'Analyzed five research papers and implemented a stacked ensemble model on the Ames Housing dataset.',
     stack: ['Python', 'Scikit-learn', 'XGBoost'],
-    highlights: ['Stacked ensemble model', 'Accuracy improved from 94% to 95%', 'Based on 5 research papers'],
+    highlights: [
+      'Stacked ensemble model',
+      'Accuracy improved from 94% to 95%',
+      'Based on 5 research papers',
+    ],
+    image: '/projects/house-price.png',
     link: '',
   },
   {
@@ -105,7 +120,11 @@ export const projects = [
     category: 'Web',
     summary: 'Web application backed by a relational database with 12+ tables.',
     stack: ['PHP', 'MySQL', 'HTML', 'CSS'],
-    highlights: ['12+ relational tables', 'Full CRUD web interface'],
+    highlights: [
+      '12+ relational tables',
+      'Full CRUD web interface',
+    ],
+    image: '/projects/hospital-management.png',
     link: '',
   },
 ]

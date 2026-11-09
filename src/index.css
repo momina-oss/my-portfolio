@@ -567,3 +567,44 @@ body::before {
   .reveal { transition: none; opacity: 1; transform: none; }
   .caret, .bg-canvas { animation: none; }
 }
+
+/* ---------- Project Cards with Images ---------- */
+
+.project-grid {
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+}
+
+.project-full {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.project-image {
+  width: calc(100% + 48px);
+  height: 190px;
+  margin: -24px -24px 20px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-card-footer {
+  height: 56px; /* was 44px */
+  min-height: 56px;
+  margin-top: auto;
+  display: flex;
+  align-items: flex-end;
+}
+
+.project-btn {
+  width: 100%;
+  height: 44px;
+  padding: 10px 16px;
+  text-align: center;
+  margin-top: 12px;
+}

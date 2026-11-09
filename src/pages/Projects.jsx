@@ -7,7 +7,9 @@ const filters = ['All', 'Machine Learning', 'Full-Stack', 'Web']
 
 export default function Projects() {
   const [filter, setFilter] = useState('All')
-  const list = filter === 'All' ? projects : projects.filter((p) => p.category === filter)
+  const list = filter === 'All'
+    ? projects
+    : projects.filter((p) => p.category === filter)
 
   return (
     <>
@@ -32,20 +34,51 @@ export default function Projects() {
           {list.map((p, i) => (
             <Reveal key={p.title} delay={i * 80}>
               <article className="card project-card project-full">
+
+                {/* Project Image */}
+                <img
+                  className="project-image"
+                  src={p.image}
+                  alt={`${p.title} preview`}
+                />
+
+                {/* Category */}
                 <div className="project-top">
                   <span className="tag tag-blue">{p.category}</span>
-                  {p.link && (
-                    <a href={p.link} target="_blank" rel="noreferrer" className="text-link">View ↗</a>
-                  )}
                 </div>
+
+                {/* Project Details */}
                 <h3>{p.title}</h3>
                 <p>{p.summary}</p>
+
+                {/* Highlights */}
                 <ul className="bullets">
-                  {p.highlights.map((h) => <li key={h}>{h}</li>)}
+                  {p.highlights.map((h) => (
+                    <li key={h}>{h}</li>
+                  ))}
                 </ul>
+
+                {/* Technologies */}
                 <div className="chips">
-                  {p.stack.map((s) => <span className="chip" key={s}>{s}</span>)}
+                  {p.stack.map((s) => (
+                    <span className="chip" key={s}>{s}</span>
+                  ))}
                 </div>
+
+                {/* Bottom Button */}
+                <div className="project-card-footer">
+                  {p.link && (
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-ghost project-btn"
+                    >
+                      View on GitHub ↗
+                    </a>
+                  )}
+                </div>
+
               </article>
             </Reveal>
           ))}
